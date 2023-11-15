@@ -18,10 +18,12 @@
         <ul>
             <li>faire les points dans l'ordre et ne passer au point suivant que lorsque le précédent est achevé
                 et testé,</li>
-            <li>utiliser la console autant que nécessaire Pour bien observer le contenu et le type des différentes variables,</li>
+            <li>utiliser la console autant que nécessaire Pour bien observer le contenu et le type des différentes
+                variables,</li>
             <li>écrire du code structuré et correctement indenté,</li>
             <li>écrire du code <strong>largement documenté !</strong></li>
-            <li>l'ajout du code JavaScript est fait entre les balises &lt;script&gt;...&lt;script&gt; de ce fichiet html</li>
+            <li>l'ajout du code JavaScript est fait entre les balises &lt;script&gt;...&lt;script&gt; de ce fichiet html
+            </li>
         </ul>
         <p>Eléments de départ fournis quel que soit l'exercice :</p>
         <ul>
@@ -35,15 +37,17 @@
                     <li>une fonction de génération d'une série aléatoire de nombres entiers rangés dans un tableau de
                         type Array,</li>
                 </ul>
-                L'utilisation de ces outils n'est pas systématiquement nécessaire (cela dépend des exercices). Par contre, 
+                L'utilisation de ces outils n'est pas systématiquement nécessaire (cela dépend des exercices). Par
+                contre,
                 <span class="text-danger">vous n'avez, en aucun cas, besoin</span> :
                 <ul>
                     <li><span class="text-danger">de modifier le code</span> de ces outils,</li>
-                    <li><span class="text-danger">de copier le code</span> des fonctions contenues dans <em>tools.js</em> dans 
+                    <li><span class="text-danger">de copier le code</span> des fonctions contenues dans
+                        <em>tools.js</em> dans
                         votre propre code.<br>
                         Si vous utilisez les fonctions outils, vous ne pouvez que les "appeler".</li>
                 </ul>
-                
+
             </li>
         </ul>
         <h5 class="text-success text-center">Que la force soit avec vous !</h5>
@@ -53,11 +57,13 @@
     <div class="card subject">
         <p class="h6 font-weight-bold text-center">Soutien #04 - Jouer avec les boucles</p>
         <ul>
-            <li>Pour les nombres entiers allant de 0 à 12, il s'agit de faire le calcul suivant : <em>nombre * (nombre + 1)</em> </li>
+            <li>Pour les nombres entiers allant de 0 à 12, il s'agit de faire le calcul suivant : <em>nombre * (nombre +
+                    1)</em> </li>
             <li>L'affichage des résultats peut se faire dans la console à chaque calcul.</li>
             <li>Questions annexes auxquelle vous pouvez répondre dans les commentaires du code :
                 <ol>
-                    <li>Que faudrait-il changer dans le code pour faire les calculs seulement sur les nombres pairs ?</li>
+                    <li>Que faudrait-il changer dans le code pour faire les calculs seulement sur les nombres pairs ?
+                    </li>
                     <li>Que faut-il changer pour faire les calculs sur les nombres de 5 à 15 ?</li>
                     <li>Que faut-il changer et/ou ajouter dans le code pour faire les calculs depuis 0 jusqu'à un nombre
                         que l'utilisateur saisirait ?</li>
@@ -83,9 +89,32 @@
     <!-- javascript part -->
     <script type="text/javascript">
 
-    function lancer() {
-        // Code here
-    }
+        /*
+         * La fonction me permet de faire le calcul monNombre(i) + 1 et de multiplier avec monNombre(i)
+         * l'opération ce répète jusqu'a monNombre(i) arrive jusqu'a 12
+         */
+        function lancer() {
+            for (let i = 0; i <= 12; i++) {
+                resultat = i * (i + 1)
+                console.log("Nombre " + i + " resultat " + resultat)
+            }
+        }
+
+        /*
+         * Réponse au question:
+
+         *  - Question 1: Pour faire les calculs que sur les nombres paire il faudrait changer
+         * (let i = 0; i <= 12; i++) par (let i = 0; i <= 12; i+= 2) du coup au lieu
+         * d'incrementer de 1 on incremente de 2 pour que i sois toujours un nombre pair
+         * 
+         *  - Question 2: Pour faire les calculs sur les nombres 5 à 15 il faudrait changer
+         * (let i = 0; i <= 12; i++) par (let i = 5; i <= 15; i++)
+         * 
+         *  - Question 3: Il faudrait rajouter un input de type "text" pour que l'utilisateur
+         * puisse saisir son nombre avec un id="nombreSaisis" dans le html, ensuite crée un
+         * let nombreSaisis = document.getElementById("nombreSaisis") et remplacer 
+         * i < 12 avec i < nombreSaisis
+         */
 
     </script>
 
