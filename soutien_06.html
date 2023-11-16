@@ -90,18 +90,16 @@
 
     <!-- javascript part -->
     <script type="text/javascript">
-
         /*
          * La fonction sert à envoyer les valeur n, min, max à la fonction
          * randomArrayOfIntFromInterval pour que ensuite je récupère un tableau remplie
          * avec des nombres aleatoire
          * return: Je sors de la fonction avec le tableau pour l'envoyer a filterTableau()
          */
+        let tableau = []
         function genererTableau() {
-            let n = 20
-            let min = 0
-            let max = 100
-            let tableau = randomArrayOfIntFromInterval(n, min, max)
+            tableau = randomArrayOfIntFromInterval(20, 0, 100)
+            displayArray(tableau)
             return tableau
         }
 
@@ -111,14 +109,13 @@
          * tableau appeler tableauFiltrer
          */
         function filtrerTableau() {
-            let tableauGenerer = genererTableau()
             let tableauFiltrer = []
-            for (let i = 0; i < tableauGenerer.length; i++) {
-                if (tableauGenerer[i] <= 50) {
-                    tableauFiltrer.push(tableauGenerer[i])
+            for (let i = 0; i < tableau.length; i++) {
+                if (tableau[i] >= 50) {
+                    tableauFiltrer.push(tableau[i])
                 }
             }
-            console.log(tableauGenerer)
+            console.log(tableau)
             displayArray(tableauFiltrer)
         }
 

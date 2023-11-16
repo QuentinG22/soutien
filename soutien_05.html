@@ -87,14 +87,13 @@
     <!-- javascript part -->
     <script type="text/javascript">
 
-        let tableau = []
-
         /*
          * La fonction me permet de faire le calcul monNombre(i) + 1 et de multiplier avec monNombre(i)
          * l'opération ce répète jusqu'a monNombre(i) arrive jusqu'a 12
          * et d'envoyer les résultats obtenu pour chaque tour de boucle au tableau pour l'afficher à la fin
          */
         function lancer() {
+            let tableau = []
             for (let i = 0; i <= 12; i++) {
                 resultat = i * (i + 1)
                 tableau.push(resultat)
